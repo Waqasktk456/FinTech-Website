@@ -1,0 +1,42 @@
+# Fintech Website Development Plan
+
+- [x] **Setup Project Structure:** Create necessary folders (css, js, images) and the main `index.html` file.
+- [x] **General Structure and Design:**
+    - [x] Implement a professional and clean design with a modern color scheme.
+    - [x] Ensure responsive layout for mobile, tablet, and desktop.
+    - [x] Integrate Oswald font and other web-safe fonts.
+    - [x] Implement smooth scroll and minimal animations.
+- [x] **Navbar:**
+    - [x] Create a sticky navbar with the logo on the left.
+    - [x] Add menu items: Home, Services, Profit Calculator, Risk Analyzer, Currency Exchange, Companies.
+- [x] **Hero Section:**
+    - [x] Add a catchy title and subtitle.
+    - [x] Include a "Start Investing Now" CTA button.
+- [x] **Services Section:**
+    - [x] Describe 3 services (Company Investment Tracker, Profit Calculator, Risk Analyzer) with icons/images and descriptions.
+- [x] **Company Profiles Section:**
+    - [x] Display 6-8 major Pakistani companies using cards.
+    - [x] Each card to include: Logo/Image, Name, Annual Profit %, Risk Level, Annual Cash Flow, Investment Button.
+    - [x] Implement the investment modal form triggered by the "Invest" button.
+    - [x] Implement calculation logic for Payback Period, NPV, Profitability Index, and simulated IRR within the modal.
+- [x] **Profit Calculator Section:**
+    - [x] Create a form with a company dropdown, investment amount, and duration inputs.
+    - [x] Implement calculation logic using selected company data and display results.
+- [x] **Risk Analyzer Section:**
+    - [x] Create a similar form to the Profit Calculator.
+    - [x] Use predefined risk levels to simulate and display risk assessment.
+- [x] **Live Currency Exchange Section:**
+    - [x] Embed the Currency Live IFrame.
+- [x] **Footer:**
+    - [x] Add quick links, contact info, and social media icons.
+- [x] **JavaScript Logic:**
+    - [x] Hardcode sample company data in a JS array/object.
+    - [x] Implement all calculation formulas (Payback Period, NPV, PI, simulated IRR).
+    - [x] Ensure live calculation updates in forms.
+    - [x] Implement input validation for forms.
+- [x] **Final Review and Testing:**
+    - [x] Test responsiveness across different devices.
+    - [x] Verify all calculations and interactions.
+    - [x] Ensure design consistency and clarity.
+- [x] **Deployment (Optional):**
+    - [x] Website files prepared for deployment.

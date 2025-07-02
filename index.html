@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate and invest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Evaluate and Invest</h1>
+                <p>All in your hands</p>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                
+                <li><a href="#profit-calculator">Profit Calculator</a></li>
+                <li><a href="#risk-analyzer">Risk Analyzer</a></li>
+                
+                <li><a href="#companies">Companies</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Invest Smartly in Pakistan's Top Companies</h1>
+                <p>Maximize your financial growth with data-driven investment decisions</p>
+                <a href="#companies" class="btn btn-primary">Start Investing Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive tools to help you make informed investment decisions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Company Investment Tracker</h3>
+                    <p>Track and analyze investments in Pakistan's top companies with real-time data and performance metrics.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Profit Calculator</h3>
+                    <p>Calculate potential returns on your investments using advanced financial formulas and historical data.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Analyzer</h3>
+                    <p>Evaluate the risk level of your investment portfolio based on market volatility and company performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section id="companies" class="companies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Pakistani Companies</h2>
+                <p>Explore investment opportunities in Pakistan's leading corporations</p>
+            </div>
+            <div class="companies-grid" id="companies-container">
+                <!-- Company cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Profit Calculator Section -->
+    <section id="profit-calculator" class="calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2>Profit Calculator</h2>
+                <p>Estimate your potential returns based on investment amount and duration</p>
+            </div>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="calc-company">Select Company</label>
+                        <select id="calc-company" class="form-control">
+                            <!-- Options will be dynamically inserted here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-amount">Investment Amount (PKR)</label>
+                        <input type="number" id="calc-amount" class="form-control" placeholder="Enter amount" min="1000">
+                    </div>
+                    <div class="form-group">
+                        <label for="calc-duration">Duration (Years)</label>
+                        <input type="number" id="calc-duration" class="form-control" placeholder="Enter years" min="1" max="30">
+                    </div>
+                    <button id="calculate-profit" class="btn btn-primary">Calculate</button>
+                </div>
+                <div class="calculator-results">
+                    <h3>Results</h3>
+                    <div class="result-item">
+                        <span>Total Profit:</span>
+                        <span id="result-total-profit">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Payback Period:</span>
+                        <span id="result-payback">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Net Present Value (NPV):</span>
+                        <span id="result-npv">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Profitability Index:</span>
+                        <span id="result-pi">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Internal Rate of Return (IRR):</span>
+                        <span id="result-irr">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Analyzer Section -->
+    <section id="risk-analyzer" class="risk-analyzer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Risk Analyzer</h2>
+                <p>Evaluate the risk level of your potential investments</p>
+            </div>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="risk-company">Select Company</label>
+                        <select id="risk-company" class="form-control">
+                            <!-- Options will be dynamically inserted here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="risk-amount">Investment Amount (PKR)</label>
+                        <input type="number" id="risk-amount" class="form-control" placeholder="Enter amount" min="1000">
+                    </div>
+                    <div class="form-group">
+                        <label for="risk-duration">Duration (Years)</label>
+                        <input type="number" id="risk-duration" class="form-control" placeholder="Enter years" min="1" max="30">
+                    </div>
+                    <button id="analyze-risk" class="btn btn-primary">Analyze Risk</button>
+                </div>
+                <div class="risk-results">
+                    <h3>Risk Assessment</h3>
+                    <div class="risk-meter">
+                        <div class="risk-indicator" id="risk-indicator"></div>
+                        <div class="risk-labels">
+                            <span>Low</span>
+                            <span>Medium</span>
+                            <span>High</span>
+                        </div>
+                    </div>
+                    <div class="risk-statement" id="risk-statement">
+                        Select a company and enter investment details to see risk assessment.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currency Exchange Section -->
+    <section id="currency-exchange" class="currency-exchange">
+        <div class="container">
+            <div class="section-header">
+                <h2>Currency Exchange</h2>
+                <p>Live exchange rates for Pakistani Rupee (PKR)</p>
+            </div>
+            <div class="exchange-container">
+                <iframe src="https://www.exchangerates.org.uk/widget/ER-LRTICKER.php?w=auto&s=1&mc=PKR&mbg=F0F0F0&bs=no&bc=000044&f=verdana&fs=16px&fc=000044&lc=000044&lhc=FE9A00&vc=FE9A00&vcu=008000&vcd=FF0000&" width="100%" height="100" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Investments Section -->
+    <section id="my-investments" class="my-investments" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Investments</h2>
+                <p>Track and manage your investment portfolio</p>
+            </div>
+            <div class="investments-container" id="investments-container">
+                <!-- Investment cards will be dynamically inserted here -->
+                <p class="loading-investments">Loading your investments...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>PakFintech</h2>
+                    <p>Your trusted partner for smart investments in Pakistan's financial markets.</p>
+                    <div class="contact">
+                        <span><i class="fas fa-phone"></i> +92 300 1234567</span>
+                        <span><i class="fas fa-envelope"></i> info@pakfintech.com</span>
+                    </div>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#profit-calculator">Profit Calculator</a></li>
+                        <li><a href="#risk-analyzer">Risk Analyzer</a></li>
+                        <li><a href="#currency-exchange">Currency Exchange</a></li>
+                        <li><a href="#companies">Companies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-form">
+                    <h2>Contact Us</h2>
+                    <form action="#" method="post">
+                        <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                        <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 PakFintech | All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <!-- Investment Modal -->
+    <div class="modal" id="investment-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Invest in <span id="modal-company-name"></span></h2>
+            <div class="modal-form">
+                <div class="form-group">
+                    <label for="modal-amount">Investment Amount (PKR)</label>
+                    <input type="number" id="modal-amount" class="form-control" placeholder="Enter amount" min="1000">
+                </div>
+                <div class="form-group">
+                    <label for="modal-duration">Duration (Years)</label>
+                    <input type="number" id="modal-duration" class="form-control" placeholder="Enter years" min="1" max="30">
+                </div>
+                <button id="modal-calculate" class="btn btn-primary">Calculate</button>
+            </div>
+            <div class="modal-results">
+                <div class="result-item">
+                    <span>Total Profit:</span>
+                    <span id="modal-total-profit">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Payback Period:</span>
+                    <span id="modal-payback">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Net Present Value (NPV):</span>
+                    <span id="modal-npv">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Profitability Index:</span>
+                    <span id="modal-pi">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Internal Rate of Return (IRR):</span>
+                    <span id="modal-irr">-</span>
+                </div>
+                <button id="modal-invest" class="btn btn-primary" style="display: none; margin-top: 1rem; width: 100%;">Invest</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Authentication Modal -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <span class="close-modal close-auth-modal">&times;</span>
+            
+            <!-- Login Container -->
+            <div id="login-container">
+                <h2>Login to Your Account</h2>
+                <form id="login-form" class="modal-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <p class="auth-toggle">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </div>
+            
+            <!-- Signup Container -->
+            <div id="signup-container" style="display: none;">
+                <h2>Create an Account</h2>
+                <form id="signup-form" class="modal-form">
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" class="form-control" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+                <p class="auth-toggle">Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
